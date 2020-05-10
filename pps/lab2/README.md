@@ -1,4 +1,4 @@
-# Wprowadzenie do pakietu Octave
+# Programowanie w pakiecie Octave
 
 W octave wszystkie macierze indeksujemy od 1, zatem nie ma elementu o indeksie 0. 
 
