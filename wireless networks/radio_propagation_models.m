@@ -24,7 +24,7 @@ endfunction
 function [L] = multi_wall(pts)
   L=pts;
   light_wall=8; # [db]
-  heavy_wall=13; # [db]
+  heavy_wall=19; # [db]
   Lc=0;          # In our example this const is eq 0 
   
   for i = 1:columns(pts)
@@ -87,8 +87,8 @@ n=2;
 L=fsps(1)+10*n*log10(d);
 received_power_one_slop=20.-L;
 
-# one slop model for n=7
-n2=7;
+# one slop model for n=8
+n2=8;
 L2=fsps(1)+10*n2*log10(d);
 received_power_one_slop_2=20.-L2;
 
@@ -105,7 +105,7 @@ hold on;
 title('Wykres mocy odebranej w funkcji odleglosci od punktu dostepowego dla danej trasy propagacji wraz z mocami czulosciowymi dla kanalu 20 MHz');
 xlabel('Odleglosc od nadajnika [m]');
 ylabel('Moc odebrana [dBm]');
-legend("One slope n=2","One slope n=7","Multi wall model");
+legend("One slope n=2","One slope n=8","Multi wall model");
 grid on;
 
 line=linspace(0,15,500);
